@@ -5,6 +5,10 @@ const search = document.querySelector('.search_box button');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 
+
+const error404 = document.querySelector('.not-found');
+
+
 const image = document.querySelector('.weather-box img');
         const temperature = document.querySelector('.weather-box .temperature');
     const description = document.querySelector('.description');
@@ -33,10 +37,22 @@ async function getData() {
   let data = await apiLink.json();
   
   
-  
-    
+  console.log(data);
 
-console.log(data);
+    if(data.cod == '404'){
+      container.style.height = '400px';
+      weatherBox.classList.remove('active');
+      weatherDetails.classList.remove('active');
+      error404.classList.add('active');
+        return;
+    }
+
+       container.style.height = '555px';
+       weatherBox.classList.add('active');
+       weatherDetails.classList.add('active');
+       error404.classList.remove('active');
+
+console.log(data.wind);
 
 
 

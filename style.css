@@ -24,10 +24,11 @@
   position: relative;
   border: 2px solid rgba(255, 255, 255, 0.2);
   width: 400px;
-  height: 555px;
+  height: 100px;
   padding: 20px;
   border-radius: 16px;
   color: #fff;
+  transition: height .6s ease;
 }
 
 .search_box{
@@ -84,6 +85,34 @@
   text-align: center;
   margin: 40px 0;
 }
+
+
+.weather-box,
+.weather-details,
+.not-found{
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.weather-box.active,
+.weather-details.active,
+.not-found.active {
+  visibility: visible;
+}
+
+.weather-box .box,
+.not-found .box {
+  transform: translateY(-100%);
+}
+
+.weather-box.active .box,
+.not-found.active .box {
+  transform: translateY(0%);
+  transition: transform 1s ease;
+  transition-delay: 0.6s;
+}
+
+
 .weather-box .temperature{
   position: relative;
   font-size: 64px;
@@ -119,6 +148,15 @@
   display: flex;
   align-items: center;
   width: 50%;
+  transform: translateY(-100%)
+}
+
+
+.weather-details.active .humidity,
+.weather-details.active .wind {
+  transform: translateY(0%);
+  transition: transform 1s ease;
+  transition-delay: 1.2s;
 }
 
 
@@ -147,4 +185,24 @@
 .weather-details p{
   font-size: 14px;
   font-weight: 500;
+}
+
+
+.not-found{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 110px;
+}
+
+.not-found img{
+  width: 65%;
+}
+
+.not-found p{
+  font-weight: 500;
+  font-size: 22px;
+  margin-top: 12px;
 }
