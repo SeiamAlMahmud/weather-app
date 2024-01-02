@@ -29,8 +29,10 @@ async function getData() {
     const apiKey = "fb220a34334868d89134d9494f2eab51";
   const cityName = document.querySelector(".search_box input").value;
   
-  if(city = "")
-  return ;
+  if(city = ""){
+    
+    return;
+  }
   
   let apiLink = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`);
   
