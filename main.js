@@ -80,5 +80,6 @@ description.innerHTML = data.weather[0].description;
 
 humidity.innerHTML = `${data.main.humidity}%`;
 
+wind.innerHTML = `${data.wind.speed}Km/h`
 console.log(data.weather[0].main)
 }
