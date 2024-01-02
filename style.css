@@ -86,6 +86,61 @@ clip-path: polygon(0 64%, 8% 76%, 19% 80%, 31% 78%, 42% 68%, 48% 46%, 58% 30%, 7
  
  
  
+ @media (max-width: 953px) {
+  
+   
+  .logo{
+    margin-left: -11rem;
+  }
+  
+  .logo h2{
+    font-size: 2.3em;
+  }
+  }
+
+
+
+ @media (max-width: 923px) {
+  
+   
+  .logo{
+    margin-left: -9.1rem;
+  }
+  
+  .logo h2{
+    font-size: 2.3em;
+
+  }
+
+  .github{
+   margin-left: -3rem;
+  }
+  }
+
+ 
+ 
+
+  @media (max-width: 867px) {
+  
+   
+    .logo{
+      margin-left: -7rem;
+    }
+    
+    .logo h2{
+      font-size: 2.3em;
+  
+    }
+  
+    .github{
+     display: none;
+    }
+    }
+ 
+ 
+ 
+ 
+ 
  
  
 .container{
@@ -146,6 +201,7 @@ clip-path: polygon(0 64%, 8% 76%, 19% 80%, 31% 78%, 42% 68%, 48% 46%, 58% 30%, 7
   font-size: 28px;
   color: #fff;
   padding: 0 40px 0 42px;
+  cursor: pointer;
 }
 
 .weather-box img{
@@ -276,3 +332,7 @@ clip-path: polygon(0 64%, 8% 76%, 19% 80%, 31% 78%, 42% 68%, 48% 46%, 58% 30%, 7
   font-size: 22px;
   margin-top: 12px;
 }
+
+
+
+
