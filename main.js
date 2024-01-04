@@ -39,7 +39,7 @@ async function getData() {
   let data = await apiLink.json();
   
   
-  console.log(data);
+  
 
     if(data.cod == '404'){
       container.style.height = '400px';
@@ -54,7 +54,6 @@ async function getData() {
        weatherDetails.classList.add('active');
        error404.classList.remove('active');
 
-console.log(data.wind);
 
 
 
@@ -99,5 +98,5 @@ description.innerHTML = data.weather[0].description;
 humidity.innerHTML = `${data.main.humidity}%`;
 
 wind.innerHTML = `${data.wind.speed}Km/h`
-console.log(data.weather[0].main)
+
 }
